@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #09202f;
+  font-family: 'Poppins', sans-serif;
+}
+html, body{
+  width: 100%;
+  height: 100%;
+  /* background: linear-gradient(150deg, #85daffaa, #adcdffaa, #c7f8ffaa); */
+}
+.main{
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(150deg, #85daffaa, #adcdffaa, #c7f8ffaa);
+}
+
+nav{
+  width: 100%;
+  height: 60px;
+  background-color: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 3vw;
+}
+.logo{
+  font-size: 1.4vw;
+  font-family: 'Dancing Script', cursive;
+}
+.logo span{
+  font-size: 2.7vw;
+  font-family: 'Dancing Script', cursive;
+}
+.nav-menu{
+  display: flex;
+  gap: 20px;
+}
+.nav-menu a{
+  text-decoration: none;
+  font-size: 1.3vw;
+  font-weight: 600;
+  font-family: 'Lato', sans-serif;
+}
+.color{
+  transition: color 200ms;
+}
+.color:hover{
+  color: #ffa424;
+}
+.nav-login button{
+  background-color: #203C4E;
+  padding: .5vw 1.4vw;
+  overflow: hidden;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 150ms ease-in-out, box-shadow 150ms ease-in-out;
+}
+.nav-login button:hover{
+  background-color: #ffa424;
+  box-shadow: 0px 0px 3px #707070;
+}
+.nav-login a{
+  text-decoration: none;
+  color: white;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  font-size: 1.2vw;
+  font-family: 'Lato', sans-serif;
+}
+.toggle{
+  color: #09202f;
+  font-size: 2vw;
+  font-weight: 600;
+  display: none;
+}
+
+
+.hero-section{
+  width: 100%;
+  height: calc(100% - 60px);
+  display: flex;
+  position: relative;
+}
+.hero-one{
+  width: 50%;
+  height: 100%;
+  /* background-color: crimson; */
+  padding: 5vw 5vw;
+  animation: div-adjust 800ms ease-out;
+}
+@keyframes div-adjust{
+  0%{
+    position: relative;
+    right: 50%;
+  }
+  100%{
+    position: relative;
+    right: 0%;
+  }
+}
+.tag1{
+  font-size: 2.8vw;
+  font-family: 'Lato', sans-serif;
+}
+.tag1 span{
+  font-size: 3.3vw;
+  color: #ffa424;
+}
+.tag2{
+  font-size: 1.2vw;
+  font-family: 'Lato', sans-serif;
+  font-weight: 600;
+  color: #00B9BE;
+  padding: 0.4vw 0.5vw;
+}
+.hero-para{
+  width: 80%;
+  padding: 1.1vw 0.5vw;
+  font-size: 1.5vw;
+  font-weight: 500;
+  word-spacing: 1.5px;
+}
+.hero-one a{
+  text-decoration: none;
+  display: inline-block;
+}
+.hero-one button{
+  cursor: pointer;
+  margin-top: 1vw;
+  padding: 1vw 4vw;
+  font-size: 1.4vw;
+  border: none;
+  border-radius: 5px;
+  background-color: #203C4E;
+  color: white;
+  animation: button-posi 3s 3s ease-in-out infinite;
+  transition: background-color 150ms ease-in-out, box-shadow 150ms ease-in-out;
+}
+.hero-one button:hover{
+  background-color: #ffa424;
+  box-shadow: 0px 0px 8px grey;
+}
+@keyframes button-posi{
+  0%{
+    position: relative;
+    left: 0vw;
+  }
+  33%{
+    position: relative;
+    left: 2vw;
+  }
+  66%{
+    position: relative;
+    left: 0vw;
+  }
+  100%{
+    position: relative;
+    left: 0vw;
+  }
+}
+
+
+
+.hero-two{
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  padding-top: 2vw;
+  padding-right: 2vw;
+}
+.hero-two img{
+  height: 100%;
+  width: 100%;
+  mix-blend-mode: multiply;
+  animation: img-adjust 800ms ease-out;
+}
+
+@keyframes img-adjust{
+  0%{
+    position: relative;
+    left: 100%;
+  }
+  100%{
+    position: relative;
+    left: 0%;
+  }
+}
+
+
+
+/*** Media Query ***/
+
+@media (max-width:900px){
+  .logo{
+    font-size: 1.8vw;
+  }
+  .logo span{
+    font-size: 3.1vw;
+  }
+  .nav-menu a{
+    font-size: 1.6vw;
+  }
+  .nav-login a{
+    font-size: 1.6vw;
+  }
+  .tag1{
+    font-size: 3.2vw;
+  }
+  .tag2{
+    font-size: 1.6vw;
+  }
+  .hero-para{
+    font-size: 1.9vw;
+  }
+  .hero-one button{
+    font-size: 1.8vw;
+  }
+}
+
+@media (max-width: 610px){
+  nav{
+    height: 100px;
+  }
+  .logo{
+    font-size: 1rem;
+  }
+  .logo span{
+    font-size: 2.5rem;
+  }
+  .toggle{
+    display: block;
+    font-size: 2rem;
+  }
+  .nav-menu{
+    display: none;
+  }
+  .nav-login{
+    display: none;
+  }
+  .hero-section{
+    flex-direction: column;
+    height: calc(100% - 100px);
+  }
+  .hero-one{
+    width: 100%;
+    height: 100%;
+    padding-top: 10%;
+  }
+  .hero-two{
+    width: 100%;
+    height: 100%;
+  }
+  .tag1{
+    font-size: 2rem;
+    text-align: center;
+  }
+  .tag1 span{
+    font-size: 2rem;
+  }
+  .tag2{
+    padding: 10px;
+    font-size: .8rem;
+  }
+  .hero-para{
+    width: 100%;
+    font-size: 1rem;
+  }
+  .hero-one button{
+    font-size: 1rem;
+  }
+  .hero-two img{
+    height: 100%;
+    width: 100%;
+  }
+}
